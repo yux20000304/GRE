@@ -15,6 +15,21 @@ Chaichon Wongkham, Baotong Lu, Chris Liu, Zhicong Zhong, Eric Lo, and Tianzheng 
 - intel-tbb 2020.3
 - jemalloc
 
+## install dependencies on ubuntu20.04
+```
+sudo apt install libtbb-dev libmkl-dev libjemalloc-dev
+
+wget https://raw.githubusercontent.com/wjakob/tbb/9e219e24fe223b299783200f217e9d27790a87b0/include/tbb/tbb_stddef.h
+sudo mv tbb_stddef.h /usr/local/include/tbb/
+```
+
+## Download datasets
+
+```
+sudo chmod +x ./datasets/download.sh
+./datasets/download.sh
+```
+
 ## Build
 ```
 git submodule update --init # only for the first time
