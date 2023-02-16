@@ -18,11 +18,12 @@ g++ --std=c++17 generator.cpp -o generator
 
 ./generator {le} {ge} {lv} {gv} {num} {path}
 ```
-- `le`: Epsilon value of local non-linearity PLA
-- `ge`: Epsilon value of global non-linearity PLA
+**hint:e refers to maxium error in a pla model**
+- `le`: Epsilon value of local non-linearity PLA (from 32 to 4096)
+- `ge`: Epsilon value of global non-linearity PLA (from 32 to 4096)
 - `lv`: Local non-linearity (number of model)
 - `gv`: Global non-linearity (number of model)
-- `num`: Number of keys to generate
+- `num`: Number of keys to generate (decides the size of an index)
 - `path`: Path for the output key file
 
 Source code is adapted from [PGM-Index](https://pgm.di.unipi.it)
